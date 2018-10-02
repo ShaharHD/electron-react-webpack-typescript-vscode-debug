@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["dom", "es7", "es2017"],
+
+    "outDir": "build",
+    "sourceMap": true,
+
+    "esModuleInterop": true,
+
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    "forceConsistentCasingInFileNames": true,
+
+    "jsx": "react",
+    "allowJs": true,
+
+    "watch": false,
+    "pretty": true,
+    "importHelpers": true
+  }
+}

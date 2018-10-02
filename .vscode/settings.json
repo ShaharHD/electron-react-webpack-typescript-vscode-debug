@@ -1,0 +1,48 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "eslint.enable": true,
+  "tslint.enable": true,
+  "jshint.enable": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/build": true,
+    "**/release": true,
+    "**/index.d.ts": true,
+    "yarn.lock": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.DS_Store": true,
+    "**/*.js.map": true
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "editor.rulers": [140],
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+
+  "TodoParser": {
+    "folderExclude": ["node_modules", ".vscode", "build", "release"],
+    "markers": ["NOTICE:", "INFO:", "HOTFIX:", "FIXME:"]
+  },
+
+  "todohighlight.keywords": [
+    {
+      "text": "NOTICE:",
+      "color": "black",
+      "backgroundColor": "yellow"
+    },
+    {
+      "text": "INFO:",
+      "color": "blue",
+      "backgroundColor": "lightyellow"
+    },
+    {
+      "text": "HOTFIX:",
+      "color": "orange",
+      "backgroundColor": "grey",
+      "overviewRulerColor": "grey"
+    }
+  ]
+}

@@ -6,6 +6,7 @@
     "robinbentley.sass-indented",
     "glen-84.sass-lint",
     "EditorConfig.EditorConfig",
+    "msjsdiag.debugger-for-chrome",
     "esbenp.prettier-vscode"
   ]
 }

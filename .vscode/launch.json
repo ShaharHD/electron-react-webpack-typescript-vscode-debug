@@ -29,7 +29,10 @@
       "port": 9222,
       "webRoot": "${workspaceFolder}",
       "timeout": 5000,
-      "url": "**/splash.pug"
+      "urlFilter": "${workspaceFolder}/build/views/splash.pug",
+      "windows": {
+        "urlFilter": "${workspaceFolder}\\build\\views\\splash.pug"
+      }
     },
     {
       "name": "Electron: Renderer App",
@@ -38,7 +41,10 @@
       "port": 9222,
       "webRoot": "${workspaceFolder}",
       "timeout": 5000,
-      "url": "**/app.pug"
+      "urlFilter": "${workspaceFolder}/build/views/app.pug",
+      "windows": {
+        "urlFilter": "${workspaceFolder}\\build\\views\\app.pug"
+      }
     }
   ],
   "compounds": [

@@ -1,5 +1,67 @@
-*.png filter=lfs diff=lfs merge=lfs -text
-*.svg filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.ico filter=lfs diff=lfs merge=lfs -text
+# Set the default behavior, in case people don't have core.autocrlf set.
+
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=auto
+* eol=lf
+
+#
+# The above will handle all files NOT found below
+#
+
+#
+## These files are text and should be normalized (Convert crlf => lf)
+#
+
+# config
+.gitattributes	text
+.gitignore		text
+.editorconfig text
+.eslintignore text
+.eslintrc     text
+.prettierrc   text
+yarn.lock     text
+
+# Documentation
+*.md			text
+LICENSE   text
+
+# Typescript/Javascript Source files
+*.ts      text
+*.js			text
+
+# Various
+*.ini			text
+*.json    text
+*.txt			text
+*.h				text
+*.in			text
+
+# Web files
+*.css			text
+*.htm			text
+*.html			text
+*.less			text
+*.sass			text
+*.scss			text
+*.xml			text
+
+#
+## These files are binary and should be left untouched and use lfs
+#
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.eot filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.gz filter=lfs diff=lfs merge=lfs -text
 *.icns filter=lfs diff=lfs merge=lfs -text
+*.ico filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.lib filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.rar filter=lfs diff=lfs merge=lfs -text
+*.svg filter=lfs diff=lfs merge=lfs -text
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.woff filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text

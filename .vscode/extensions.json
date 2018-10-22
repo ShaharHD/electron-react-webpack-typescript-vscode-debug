@@ -7,6 +7,7 @@
     "glen-84.sass-lint",
     "EditorConfig.EditorConfig",
     "msjsdiag.debugger-for-chrome",
+    "mariusschulz.yarn-lock-syntax",
     "esbenp.prettier-vscode"
   ]
 }

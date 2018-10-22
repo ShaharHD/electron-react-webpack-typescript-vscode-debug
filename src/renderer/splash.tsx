@@ -2,8 +2,7 @@ import Actuate from 'actuatejs';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-// tslint:disable-next-line:no-var-requires
-const splashImage = require('./images/logo.svg');
+import splashImage from './images/logo.svg';
 import './splash.scss';
 
 const root = document.getElementById('splash');

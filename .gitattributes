@@ -29,6 +29,8 @@ LICENSE   text
 # Typescript/Javascript Source files
 *.ts      text
 *.js			text
+*.tsx      text
+*.jsx			text
 
 # Various
 *.ini			text

@@ -119,7 +119,7 @@
     "react-transition-group": "^2.5.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "systeminformation": "^3.45.7",
+    "systeminformation": "^3.45.9",
     "tslib": "^1.9.3"
   }
 }

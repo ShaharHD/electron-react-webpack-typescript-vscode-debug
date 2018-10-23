@@ -1,5 +1,5 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
-import * as isDev from 'electron-is-dev';
+import electron_is_dev from 'electron-is-dev';
 import setupPug from 'electron-pug';
 import WindowStateKeeper from 'electron-window-state';
 
@@ -66,7 +66,7 @@ function initMainWindow(): void {
 
 app.once('ready', async () => {
   try {
-    const pug = await setupPug({ pretty: isDev });
+    const pug = await setupPug({ pretty: electron_is_dev });
     pug.on('error', (err) => console.error('electron-pug error', err));
   } catch (err) {
     console.log('Could not initiate electron-pug: ', err);

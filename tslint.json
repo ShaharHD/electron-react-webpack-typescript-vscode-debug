@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint-react-recommended"],
+  "extends": ["tslint-react-recommended", "tslint-config-prettier"],
   "rules": {
     "quotemark": [true, "single", "jsx-double"],
     "trailing-comma": [true, "always"],

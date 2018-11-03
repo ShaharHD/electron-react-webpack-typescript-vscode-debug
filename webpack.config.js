@@ -4,7 +4,7 @@ const merge = require('webpack-merge');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -101,9 +101,7 @@ const mainConfig = merge.smart(baseConfig, {
     main: './src/main/index.ts',
   },
   plugins: [
-    devMode
-      ? new NullPlugin()
-      : new ForkTsCheckerWebpackPlugin({ tslint: true }),
+    devMode ? new NullPlugin() : new ForkTsCheckerWebpackPlugin({ tslint: true }), // tslint
     new MiniCssExtractPlugin(),
   ],
 });
@@ -124,5 +122,5 @@ const rendererDevConfig = merge.smart(rendererConfig, developmentConfig);
 const rendererProdConfig = merge.smart(rendererConfig, productionConfig);
 
 module.exports = devMode
-  ? [mainDevConfig, rendererDevConfig]
-  : [mainProdConfig, rendererProdConfig];
+  ? [mainDevConfig, rendererDevConfig] // dev
+  : [mainProdConfig, rendererProdConfig]; // production

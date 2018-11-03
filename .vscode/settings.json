@@ -17,7 +17,7 @@
     "**/*.js.map": true
   },
   "typescript.tsdk": "./node_modules/typescript/lib",
-  "editor.rulers": [140],
+  "editor.rulers": [120],
 
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,

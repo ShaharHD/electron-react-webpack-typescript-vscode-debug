@@ -1,27 +1,30 @@
 @import '~animate.css/animate.min.css';
 
 .splash {
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: 100vh;
-}
-.splash img {
-  animation-duration: 1.5s;
-  animation-delay: 0.5s;
-  margin-bottom: 12px;
-  max-width: 200px;
-  display: block;
-}
+  justify-content: center;
 
-.splash img.animated.tada {
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-  animation-delay: 0s;
-}
+  .img {
+    animation-delay: 0.5s;
+    animation-duration: 1.5s;
+    display: block;
+    margin-bottom: 12px;
+    max-width: 200px;
 
-.splash button {
-  margin: auto;
-  display: block;
+    .animated {
+      .tada {
+        animation-delay: 0s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  button {
+    display: block;
+    margin: auto;
+  }
 }

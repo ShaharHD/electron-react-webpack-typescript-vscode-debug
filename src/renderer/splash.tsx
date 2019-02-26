@@ -9,25 +9,17 @@ const root = document.getElementById('splash');
 
 export interface SplashProps {}
 
-interface State {
-  username?: string;
-  password?: string;
-}
+interface State {}
 
 class Splash extends Component<SplashProps, State> {
   constructor(props: SplashProps) {
     super(props);
-    this.state = { username: '', password: '' };
   }
 
   public render() {
     return (
       <div className="splash">
-        <img
-          alt="logo"
-          src={splashImage}
-          onLoad={(e) => Actuate(['fadeIn', 'tada'])(e.target)}
-        />
+        <img alt="logo" src={splashImage} onLoad={(e) => Actuate(['fadeIn', 'tada'])(e.target)} />
         <p>Loading...</p>
       </div>
     );

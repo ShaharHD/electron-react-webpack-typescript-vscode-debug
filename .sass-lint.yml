@@ -1,0 +1,7 @@
+options:
+  merge-default-rules: true
+rules:
+  leading-zero: 0
+  nesting-depth:
+    - 2
+    - max-depth: 3

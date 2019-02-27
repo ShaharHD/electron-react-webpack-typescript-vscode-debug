@@ -3,6 +3,7 @@
   "eslint.enable": true,
   "tslint.enable": true,
   "jshint.enable": false,
+  "sasslint.enable": true,
   "search.exclude": {
     "**/node_modules": true,
     "**/build": true,

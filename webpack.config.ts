@@ -1,20 +1,22 @@
-const NodeExternals = require('webpack-node-externals');
-const path = require('path');
-const merge = require('webpack-merge');
+import path from 'path';
+import merge from 'webpack-merge';
+import NodeExternals from 'webpack-node-externals';
 
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+import CleanWebpackPlugin from 'clean-webpack-plugin';
 
-const TerserPlugin = require('terser-webpack-plugin');
+import TerserPlugin from 'terser-webpack-plugin';
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const NullPlugin = require('webpack-null-plugin');
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import NullPlugin from 'webpack-null-plugin';
+
+import { Configuration } from 'webpack';
 
 const devMode = process.env.NODE_ENV === 'development';
 
-const baseConfig = {
+const baseConfig: Configuration = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].js',
@@ -25,7 +27,7 @@ const baseConfig = {
     __filename: false,
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.json'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
   },
   devtool: 'source-map',
   watchOptions: {
@@ -75,14 +77,14 @@ const baseConfig = {
   externals: [NodeExternals()],
 };
 
-const developmentConfig = {
+const developmentConfig: Configuration = {
   optimization: {
     splitChunks: false,
     removeEmptyChunks: false,
   },
 };
 
-const productionConfig = {
+const productionConfig: Configuration = {
   optimization: {
     minimizer: [
       new TerserPlugin({
@@ -121,6 +123,6 @@ const rendererConfig = merge.smart(baseConfig, {
 const rendererDevConfig = merge.smart(rendererConfig, developmentConfig);
 const rendererProdConfig = merge.smart(rendererConfig, productionConfig);
 
-module.exports = devMode
+export default (devMode
   ? [mainDevConfig, rendererDevConfig] // dev
-  : [mainProdConfig, rendererProdConfig]; // production
+  : [mainProdConfig, rendererProdConfig]); // production

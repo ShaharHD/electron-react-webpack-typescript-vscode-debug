@@ -117,7 +117,7 @@ const rendererConfig = merge.smart(baseConfig, {
     splash: './src/renderer/splash.tsx',
     app: './src/renderer/app.tsx',
   },
-  plugins: [new MiniCssExtractPlugin(), new CleanWebpackPlugin('build')],
+  plugins: [new MiniCssExtractPlugin(), new CleanWebpackPlugin()],
 });
 
 const rendererDevConfig = merge.smart(rendererConfig, developmentConfig);

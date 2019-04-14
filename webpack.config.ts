@@ -6,7 +6,7 @@ import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 import TerserPlugin from 'terser-webpack-plugin';
 
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ExtractCssChunksPlugin from 'extract-css-chunks-webpack-plugin';
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
@@ -46,7 +46,7 @@ const baseConfig: Configuration = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [ExtractCssChunksPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.pug$/,
@@ -104,7 +104,7 @@ const mainConfig = merge.smart(baseConfig, {
   },
   plugins: [
     devMode ? new NullPlugin() : new ForkTsCheckerWebpackPlugin({ tslint: true }), // tslint
-    new MiniCssExtractPlugin(),
+    new ExtractCssChunksPlugin(),
   ],
 });
 
@@ -117,7 +117,7 @@ const rendererConfig = merge.smart(baseConfig, {
     splash: './src/renderer/splash.tsx',
     app: './src/renderer/app.tsx',
   },
-  plugins: [new MiniCssExtractPlugin(), new CleanWebpackPlugin()],
+  plugins: [new ExtractCssChunksPlugin(), new CleanWebpackPlugin()],
 });
 
 const rendererDevConfig = merge.smart(rendererConfig, developmentConfig);

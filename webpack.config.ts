@@ -2,7 +2,7 @@ import path from 'path';
 import merge from 'webpack-merge';
 import NodeExternals from 'webpack-node-externals';
 
-import CleanWebpackPlugin from 'clean-webpack-plugin';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 import TerserPlugin from 'terser-webpack-plugin';
 

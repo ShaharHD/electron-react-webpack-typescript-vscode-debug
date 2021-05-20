@@ -1,12 +1,12 @@
 {
   "recommendations": [
-    "ms-vscode.vscode-typescript-tslint-plugin",
     "dbaeumer.vscode-eslint",
-    "wayou.vscode-todo-highlight",
-    "robinbentley.sass-indented",
+    "esbenp.prettier-vscode",
     "glen-84.sass-lint",
-    "msjsdiag.debugger-for-chrome",
     "mariusschulz.yarn-lock-syntax",
-    "esbenp.prettier-vscode"
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "msjsdiag.debugger-for-chrome",
+    "syler.sass-indented",
+    "gruntfuggly.todo-tree"
   ]
 }

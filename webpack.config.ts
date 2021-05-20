@@ -2,7 +2,7 @@ import path from 'path';
 import merge from 'webpack-merge';
 import NodeExternals from 'webpack-node-externals';
 
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+// import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 import TerserPlugin from 'terser-webpack-plugin';
 
@@ -117,7 +117,7 @@ const rendererConfig = merge.smart(baseConfig, {
     splash: './src/renderer/splash.tsx',
     app: './src/renderer/app.tsx',
   },
-  plugins: [new ExtractCssChunksPlugin(), new CleanWebpackPlugin()],
+  plugins: [new ExtractCssChunksPlugin()],
 });
 
 const rendererDevConfig = merge.smart(rendererConfig, developmentConfig);
